@@ -14,7 +14,7 @@ public class TestService {
 		this.bRepo = bRepo;
 	}
 	
-	//@Transactional
+	@Transactional
 	public void test() {
 		A a = new A();
 		a.setName("a1");
