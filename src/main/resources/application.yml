@@ -1,0 +1,26 @@
+log4j:
+    category:
+        org:
+            springframework:
+                data:
+                    neo4j:
+                        support:
+                            query: DEBUG
+management:
+    security:
+        enabled: false
+spring:
+    data:
+        neo4j:
+            compiler: org.neo4j.ogm.compiler.MultiStatementCypherCompiler
+            password: admin
+            uri: bolt://neo4j:admin@localhost:7687
+            username: neo4j
+            open-in-view: true
+    jackson:
+        serialization:
+            INDENT_OUTPUT: true
+    main:
+        banner-mode: 'off'
+    thymeleaf:
+        cache: false
