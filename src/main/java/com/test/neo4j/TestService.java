@@ -24,15 +24,11 @@ public class TestService {
 		System.out.println(a);
 		System.out.println("id : "+a.getId());
 		A a2 = aRepo.save(a);
-		System.out.println(a2);
 		Long id = a2.getId();
-		System.out.println("id : "+id);
 		
-		A a3 = new A();
-		a3.setId(id);
-		a3.setName("a2");
-		System.out.println(a3);
-		aRepo.save(a3);
+		a2.setName("a2");
+		a2.setB(null);
+		aRepo.save(a2);
 		System.out.println(aRepo.findOne(id)); // b must be null
 	}
 }
